@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PageController@index');
+Route::post('/', 'UrlController@store')->name('url_store');
