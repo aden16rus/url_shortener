@@ -1,7 +1,7 @@
 <?
 function getExpirationTime($delay)
 {
-    return now() + ($delay * 60);
+    return now()->addSeconds($delay * 60)->timestamp;
 }
 
 function sanitize_url($url) {

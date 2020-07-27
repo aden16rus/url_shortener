@@ -28,12 +28,12 @@ class UrlService
         $url->is_expirable = $request->is_expirable;
 
         if ($request->is_expirable) {
-            $url->expiration_delay == getExpirationTime($request->expiration_delay);
+            $url->expiration_delay = getExpirationTime($request->expiration_delay);
         }
 
         $url->save();
 
-        $url->short_code == $this->generateCode($url->id);
+        $url->short_code = $this->generateCode($url->id);
         $url->save();
 
         return $this->generateShortUrl($url);
@@ -48,8 +48,8 @@ class UrlService
 	 */
 	public function generateCode($id)
 	{
-        $wideId = str_pad($id, 5, "0", STR_PAD_LEFT);
-		return BaseIntEncoder::encode($wideId);
+        $wideId = strrev(str_pad($id, 6, "0", STR_PAD_LEFT));
+        return BaseIntEncoder::encode($wideId);
 	}
 
 	/**

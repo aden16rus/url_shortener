@@ -13,5 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@index');
+Route::get('/', 'PageController@index')->name('index');
 Route::post('/', 'UrlController@store')->name('url_store');
+Route::get('/{short_code}', 'UrlController@redirect')->name('url_redirect');
