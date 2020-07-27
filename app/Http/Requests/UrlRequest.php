@@ -26,7 +26,7 @@ class UrlRequest extends FormRequest
         return [
             'full_url' => 'required|url',
             'is_expirable' => 'boolean',
-            'expiration_delay' => 'required_if:expired,true|numeric|min:60'
+            'expiration_delay' => 'required_if:expired,true|numeric|min:1'
         ];
     }
 }

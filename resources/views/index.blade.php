@@ -30,7 +30,7 @@
                             </div>
                             <div class="form-group">
                                 {!! Form::label('expiration_delay', 'Expiration time in minutes') !!}
-                                {!! Form::number('expiration_delay', '60', ['class' => 'form-control', 'min' => 60, 'step' => '1']) !!}
+                                {!! Form::number('expiration_delay', '60', ['class' => 'form-control', 'min' => 1, 'step' => '1']) !!}
                             </div>
                             {!! Form::submit('Get short', ['class' => 'btn btn-success']) !!}
                         {!! Form::close() !!}
