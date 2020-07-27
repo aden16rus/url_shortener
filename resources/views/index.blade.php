@@ -16,12 +16,12 @@
                     <div class="card-body">
                         {!! Form::open(['route' => 'url_store']) !!}
                             <div class="form-group">
-                                {!! Form::label('url', 'Put your long link there') !!}
-                                {!! Form::text('url', '', ['class' => 'form-control', 'required' => true]) !!}
+                                {!! Form::label('full_url', 'Put your long link there') !!}
+                                {!! Form::text('full_url', '', ['class' => 'form-control', 'required' => true]) !!}
                             </div>
                             <div class="form-group form-check">
-                                {!! Form::checkbox('expired', true, false, ['class' => 'form-check-input']) !!}
-                                {!! Form::label('expired', 'Expired link', ['class' => 'form-check-label']) !!}
+                                {!! Form::checkbox('is_expirable', true, false, ['class' => 'form-check-input']) !!}
+                                {!! Form::label('is_expirable', 'Expired link', ['class' => 'form-check-label']) !!}
                             </div>
                             <div class="form-group">
                                 {!! Form::label('expiration_delay', 'Expiration time in minutes') !!}

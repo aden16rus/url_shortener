@@ -24,8 +24,8 @@ class UrlRequest extends FormRequest
     public function rules()
     {
         return [
-            'url' => 'required|url',
-            'expired' => 'boolean',
+            'full_url' => 'required|url',
+            'is_expirable' => 'boolean',
             'expiration_delay' => 'required_if:expired,true|numeric|min:60'
         ];
     }
