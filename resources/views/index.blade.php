@@ -9,6 +9,11 @@
                         {{ session('message') }}
                     </div>
                 @endif
+                @if (session('error'))
+                    <div class="alert alert-warning mb-5">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <div class="card">
                     <div class="card-header">
                         <h3 class="align-center">Url shortener</h3>
